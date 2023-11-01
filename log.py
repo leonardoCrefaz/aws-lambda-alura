@@ -1,2 +1,5 @@
+import os
+
 def log(mensagem):
-    print("Adicionando log via função: {mensagem}")
+    print(os.environ["MINHA_VAR"])
+    print(mensagem)
