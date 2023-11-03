@@ -6,11 +6,11 @@ s3 = boto3.resource("s3")
 
 def lambda_handler(event, context):
 
-    log(f"Event: {json.dumps(event)}")
-    log(f"Context: {context.invoked_function_arn}")
-
     Bucket = event["Records"][0]["s3"]["bucket"]["name"]
     Key = event["Records"][0]["s3"]["object"]["key"]
+
+    log(f"Bucket: {Bucket}")
+    log(f"Key: {Key}")
 
     getObjectResult = s3.Object(bucket_name=Bucket, key=Key)
 
