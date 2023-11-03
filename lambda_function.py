@@ -4,7 +4,7 @@ from log import log
 def lambda_handler(event, context):
 
     log(f"Event: {json.dumps(event)}")
-    log(f"Context: {json.dumps(context)}")
+    log(f"Context: {context.invoked_function_arn}")
 
     return {
         "statusCode": 200,
