@@ -7,7 +7,7 @@ def lambda_handler(event, context):
 
     return {
         "statusCode": 200,
-        "body": f"<html><body>Dados da requisição {json.dumps(event)}</body></html>",
+        "body": f"<html><body>Dados da requisicao {json.dumps(event)}</body></html>",
         "headers": {
             "content-type": "text/html",
         }
